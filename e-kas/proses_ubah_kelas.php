@@ -8,7 +8,6 @@ $deskripsi = $_POST['deskripsi'];
 if ( !empty($nama) && !empty($deskripsi) ) {
 
     $query = mysqli_query($conn, "UPDATE kelas SET nama='$nama', deskripsi='$deskripsi' WHERE id_kelas='$id_kelas'");
-    
     if ( $query == TRUE ) {
         echo "Berhasil mengubah data kelas<br>Kembali ke<a href='admin.php?page=kelas'>halaman kelas</a>";
     } else {
