@@ -1,5 +1,9 @@
 <?php
-$query = mysqli_query($conn, "SELECT * FROM kas WHERE id_kelas = '{$_SESSION['id_kelas']}'");
+if ( $_SESSION['id_kelas'] !== NULL ) {
+    $query = mysqli_query($conn, "SELECT * FROM kas WHERE id_kelas = '{$_SESSION['id_kelas']}'");
+} else {
+    $query = mysqli_query($conn, "SELECT * FROM kas");
+}
 $no = 1;
 ?>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
@@ -18,7 +22,6 @@ $no = 1;
         <thead class="thead-light">
             <tr>
                 <th>No.</th>
-                <th>ID Kas</th>
                 <th>Nama</th>
                 <th>Keterangan</th>
                 <th>Tanggal Pembayaran</th>
@@ -31,7 +34,6 @@ $no = 1;
             <?php while($result = mysqli_fetch_array($query, MYSQLI_ASSOC)): ?>
             <tr>
                 <td><?= $no++; ?></td>
-                <td><?= $result['id_kas']; ?></td>
                 <td><?= $result['nama']; ?></td>
                 <td><?= $result['keterangan']; ?></td>
                 <td><?= $result['tanggal_pembayaran']; ?></td>
