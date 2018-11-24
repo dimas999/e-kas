@@ -22,6 +22,10 @@ if ( isset($_GET['id_kelas']) ) {
             <input name="nama" type="text" class="form-control" placeholder="Masukkan nama" value="<?= $result['nama']; ?>">
         </div>
         <div class="form-group">
+            <label for="nominal_uang_kas">Nominal Uang Kas</label>
+            <input name="nominal_uang_kas" type="text" class="form-control" value="<?= $result['nominal_uang_kas']; ?>">
+        </div>
+        <div class="form-group">
           <label for="deskripsi">Deskripsi</label>
             <textarea name="deskripsi" class="form-control" placeholder="Masukkan deskripsi" cols="5" rows="10"><?= $result['deskripsi']; ?></textarea>
         </div>

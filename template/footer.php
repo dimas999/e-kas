@@ -9,6 +9,12 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
+    <script src="assets/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.select2').select2();
+      });
+    </script>
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
     <script>

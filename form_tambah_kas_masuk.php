@@ -21,7 +21,7 @@ $siswa = mysqli_query($conn, "SELECT * FROM siswa WHERE id_kelas = '{$_SESSION['
         </div>
         <div class="form-group">
           <label for="id_siswa">Pilih Siswa</label>
-           <select name="id_siswa" class="form-control">
+           <select name="id_siswa[]" class="select2 form-control" multiple="multiple">
               <?php while($data_siswa = mysqli_fetch_array($siswa, MYSQLI_ASSOC)): ?>
                 <option value="<?= $data_siswa['id_siswa']; ?>"><?= $data_siswa['nama']; ?></option>
               <?php endwhile; ?>

@@ -19,6 +19,7 @@ $jumlah_data_siswa = mysqli_num_rows($siswa);
 
     <!-- Custom styles for this template -->
     <link href="assets/css/custom/admin.css" rel="stylesheet">
+    <link href="assets/css/select2.min.css" rel="stylesheet" />
   </head>
 
   <body>

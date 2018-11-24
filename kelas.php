@@ -17,6 +17,7 @@ $no = 1;
             <tr>
                 <th>ID Kelas</th>
                 <th>Nama</th>
+                <th>Nominal Uang Kas</th>
                 <th>Deskripsi</th>
                 <th style="min-width: 175px;">Aksi</th>
             </tr>
@@ -26,6 +27,7 @@ $no = 1;
             <tr>
                 <td><?= $result['id_kelas']; ?></td>
                 <td><?= $result['nama']; ?></td>
+                <td><?= $result['nominal_uang_kas'];?></td>
                 <td><?= $result['deskripsi']; ?></td>
                 <td>
                     <a href="?page=form_edit_kelas&id_kelas=<?= $result['id_kelas']; ?>" class="btn btn-primary">Ubah</a>
